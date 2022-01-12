@@ -1,0 +1,69 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.darkIcon {
+  fill: #eaeaec;
+}
+
+.switchControl {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  border-radius: 50em;
+  padding: 3px 0;
+  margin: 0 5px;
+}
+
+.switchToggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.switchTrack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  user-select: none;
+  border-radius: inherit;
+  border: 2px solid;
+  border-color: #eaeaec;
+  z-index: 1;
+  cursor: pointer;
+  transition: border-color 250ms ease-in-out;
+}
+
+.switchMarker {
+  position: relative;
+  background-color: #eaeaec;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  transform: translateX(5px);
+  transition: transform 250ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+.switchToggle:checked + .switchTrack {
+  border-color: #eaeaec;
+}
+
+.switchToggle:checked ~ .switchMarker {
+  transform: translateX(20px);
+  background-color: #eaeaec;
+}

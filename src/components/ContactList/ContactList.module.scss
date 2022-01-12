@@ -1,0 +1,16 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 441px) {
+  .item {
+    padding: 10px 5px;
+  }
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+}

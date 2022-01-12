@@ -1,0 +1,13 @@
+.link {
+  display: block;
+}
+
+.logoImg {
+  width: 180px;
+}
+
+@media screen and (min-width: 720px) {
+  .link {
+    left: 60px;
+  }
+}

@@ -1,0 +1,229 @@
+// @import-normalize;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('images/phone-mobile.jpg'),
+    linear-gradient(
+      to right,
+      #eaeaec 0%,
+      #e9e9e9 20%,
+      #ebe9ea 40%,
+      #eeeeee 60%,
+      #e9e7e8 80%,
+      #dddbdc 100%
+    );
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #1a1a1b;
+}
+
+body.dark {
+  background-image: url('images/phone-mobile-dark.jpg'),
+    linear-gradient(
+      to right,
+      #eaeaec 0%,
+      #e9e9e9 20%,
+      #ebe9ea 40%,
+      #eeeeee 60%,
+      #e9e7e8 80%,
+      #dddbdc 100%
+    );
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #eaeaec;
+
+  #contactsList svg {
+    fill: #eaeaec;
+  }
+  #logo {
+    filter: brightness(2);
+  }
+
+  // форма "добавить контакт"
+  #form input:focus ~ label {
+    color: #eaeaec;
+  }
+  #formName,
+  #formNumber {
+    color: #eaeaec;
+  }
+  #formBtn,
+  #filterBtn {
+    background-color: #eaeaec;
+    color: #1a1a1b;
+  }
+
+  // инпут фильтра
+  #filterInput {
+    color: #eaeaec;
+  }
+
+  #filterInput ~ span::before,
+  #filterInput ~ span::after,
+  #filterInput ~ span i::before,
+  #filterInput ~ span i::after {
+    background-color: #eaeaec;
+  }
+
+  // кнопка "редактировать"
+  #contactsList button[editext='edit-button'] {
+    color: #eaeaec;
+  }
+
+  #contactsList button[editext='edit-button']:hover {
+    color: #ff524b;
+  }
+
+  // кнопка "delete"
+  #contactsList button span {
+    color: #eaeaec;
+    background: #49494b;
+  }
+  #contactsList button p {
+    color: #eaeaec;
+  }
+  #contactsList button {
+    border-color: #eaeaec;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    background: url('images/phone-tablet.jpg'),
+      linear-gradient(
+        to right,
+        #eaeaec 0%,
+        #e9e9e9 20%,
+        #ebe9ea 40%,
+        #eeeeee 60%,
+        #e9e7e8 80%,
+        #dddbdc 100%
+      );
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  body.dark {
+    background: url('images/phone-tablet-dark.jpg'),
+      linear-gradient(
+        to right,
+        #eaeaec 0%,
+        #e9e9e9 20%,
+        #ebe9ea 40%,
+        #eeeeee 60%,
+        #e9e7e8 80%,
+        #dddbdc 100%
+      );
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 875px) {
+  body {
+    background: url('images/phone-tablet.jpg'),
+      linear-gradient(
+        to right,
+        #eaeaec 0%,
+        #e9e9e9 20%,
+        #ebe9ea 40%,
+        #eeeeee 60%,
+        #e9e7e8 80%,
+        #dddbdc 100%
+      );
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  body.dark {
+    background: url('images/phone-tablet-dark.jpg'),
+      linear-gradient(
+        to right,
+        #eaeaec 0%,
+        #e9e9e9 20%,
+        #ebe9ea 40%,
+        #eeeeee 60%,
+        #e9e7e8 80%,
+        #dddbdc 100%
+      );
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  body {
+    background: url('images/phone-desktop.jpg'),
+      linear-gradient(
+        to right,
+        #eaeaec 0%,
+        #e9e9e9 20%,
+        #ebe9ea 40%,
+        #eeeeee 60%,
+        #e9e7e8 80%,
+        #dddbdc 100%
+      );
+    background-attachment: fixed;
+    background-position: center center, center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  body.dark {
+    background: url('images/phone-desktop-dark.jpg'),
+      linear-gradient(
+        to right,
+        #eaeaec 0%,
+        #e9e9e9 20%,
+        #ebe9ea 40%,
+        #eeeeee 60%,
+        #e9e7e8 80%,
+        #dddbdc 100%
+      );
+    background-attachment: fixed;
+    background-position: center center, center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}

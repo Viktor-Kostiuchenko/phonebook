@@ -1,0 +1,36 @@
+.langWrapper {
+  margin-bottom: 10px;
+}
+.list {
+  display: flex;
+}
+
+.item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  filter: grayscale(80%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 2px solid;
+  border-color: transparent;
+  transition: border-color 300ms ease-in-out;
+}
+
+.selected {
+  border-color: #eaeaec;
+  filter: grayscale(0%);
+}
+
+.button:hover {
+  border-color: #eaeaec;
+}
