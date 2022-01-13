@@ -5,6 +5,11 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   en: {
     translation: {
+      home: 'Home',
+      in: 'Log in',
+      out: 'Log out',
+      reg: 'Registration',
+      user: 'Welcome',
       phonebook: 'Phonebook',
       name: 'Name',
       number: 'Phone number',
@@ -14,11 +19,14 @@ const resources = {
       delete: 'Delete',
       clear: 'Clear',
       total: 'Contacts:',
-      out: 'log out',
     },
   },
   uk: {
     translation: {
+      home: 'Головна',
+      in: 'Увійти',
+      reg: 'Зареєструватися',
+      user: 'Вітаємо',
       phonebook: 'Телефонна книга',
       name: "Ім'я",
       number: 'Номер телефону',
@@ -33,6 +41,11 @@ const resources = {
   },
   ru: {
     translation: {
+      home: 'Главная',
+      reg: 'Зарегистрироваться',
+      in: 'Войти',
+      out: 'Выйти',
+      user: 'Приветствуем',
       phonebook: 'Телефонная книга',
       name: 'Имя',
       number: 'Номер телефона',
@@ -42,7 +55,6 @@ const resources = {
       delete: 'Удалить',
       clear: 'Очистить',
       total: 'Контакты:',
-      out: 'Выйти',
     },
   },
 };

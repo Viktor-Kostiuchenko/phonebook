@@ -1,11 +1,19 @@
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import Section from 'components/Section';
 import ContactForm from 'components/Form';
 import Filter from 'components/Filter';
 import ContactList from 'components/ContactList';
-import s from './Main.module.scss';
+import { operations } from 'redux/contacts';
+import s from './ContactsView.module.scss';
 
-export default function Main() {
+export default function ContactsView() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(operations.fetchContacts());
+  }, [dispatch]);
+
   const { t } = useTranslation();
   return (
     <main className={s.main}>

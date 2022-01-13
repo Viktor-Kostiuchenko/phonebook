@@ -1,42 +1,33 @@
 .header {
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  width: 320px;
+  // width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(100, 0, 0, 0.1);
+  // position: fixed;
 }
 
 @media screen and (min-width: 440px) {
   .header {
-    width: 440px;
+    // width: 440px;
   }
 }
 
 @media screen and (min-width: 720px) {
   .header {
-    display: flex;
-    width: 720px;
+    // width: 720px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .header {
     padding: 20px 60px;
-    width: 1024px;
+    // width: 1024px;
   }
-}
-
-.options {
-  display: flex;
-}
-
-.icon {
-  fill: #ff524b;
-  transition: fill 300ms linear;
-}
-
-.icon:hover {
-  background-color: #f16965;
 }
 
 .burger {
@@ -47,122 +38,6 @@
   right: 38px;
 }
 
-.burger:hover .icon {
-  fill: #ee8884;
-}
-
-.crossButton {
-  height: 24px;
-  width: 24px;
-}
-
-.cross {
-  background: #bdc3c7;
-}
-
-.menu {
-  background: #ff524b;
-  font-size: 1.15em;
-  overflow: hidden !important;
-  border-bottom-left-radius: 100%;
-}
-
-.morphShape {
-  fill: #373a47;
-}
-
-.itemList {
-  padding-top: 2em;
-  padding-right: 0.8em;
-}
-
-.item {
-  display: flex !important;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.overlay {
-  background: transparent !important;
-}
-
-.button {
-  width: 80px;
-  height: 28px;
-  border: 1px solid #000;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-
-  background-color: #eaeaec;
-  color: #1a1a1b;
-  line-height: 30px;
-  letter-spacing: 0.05em;
-  padding: 0;
-  border: none;
-}
-
-.buttonName {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.button:before,
-.button:after {
-  position: absolute;
-  content: '';
-  height: 0%;
-  width: 1px;
-  background: #000;
-}
-.button:before {
-  right: 0;
-  top: 0;
-  transition: all 500ms ease;
-}
-.button:after {
-  left: 0;
-  bottom: 0;
-  transition: all 500ms ease;
-}
-.button:hover {
-  color: #000;
-}
-.button:hover:before {
-  transition: all 500ms ease;
-  height: 100%;
-}
-.button:hover:after {
-  transition: all 500ms ease;
-  height: 100%;
-}
-.buttonName:before,
-.buttonName:after {
-  position: absolute;
-  content: '';
-  background: #000;
-}
-.buttonName:before {
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 1px;
-  transition: all 500ms ease;
-}
-.buttonName:after {
-  right: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  transition: all 500ms ease;
-}
-.buttonName:hover:before {
-  width: 100%;
-}
-.buttonName:hover:after {
-  width: 100%;
+.burgerBars {
+  background-color: red;
 }
