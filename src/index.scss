@@ -41,6 +41,10 @@ body.dark {
   background-repeat: no-repeat;
   color: #eaeaec;
 
+  #homeView {
+    background-image: url('images/home-dark.jpg');
+  }
+
   #contactsList svg {
     fill: #eaeaec;
   }

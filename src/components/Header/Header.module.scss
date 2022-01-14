@@ -3,30 +3,18 @@
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  // width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(100, 0, 0, 0.1);
-  // position: fixed;
-}
-
-@media screen and (min-width: 440px) {
-  .header {
-    // width: 440px;
-  }
-}
-
-@media screen and (min-width: 720px) {
-  .header {
-    // width: 720px;
-  }
+  position: absolute;
+  top: 0;
+  z-index: 100;
 }
 
 @media screen and (min-width: 1024px) {
   .header {
     padding: 20px 60px;
-    // width: 1024px;
   }
 }
 
@@ -39,5 +27,25 @@
 }
 
 .burgerBars {
-  background-color: red;
+  background-color: #ff524b;
+}
+
+.crossButton {
+  height: 24px;
+  width: 24px;
+}
+
+.cross {
+  background: #bdc3c7;
+}
+
+.menu {
+  background: #ff524b;
+  font-size: 1.15em;
+  overflow: hidden !important;
+  padding: 30px;
+  padding-top: 60px;
+  @media screen and (min-width: 720px) {
+    padding: 30px;
+  }
 }

@@ -1,74 +1,96 @@
 .nameBox {
   position: absolute;
   top: 10px;
-  right: 38px;
+  @media screen and (min-width: 720px) {
+    position: static;
+  }
 }
 
 .name {
   font-size: 20px;
-  color: #ff524b;
+  color: #eaeaec;
+  @media screen and (min-width: 720px) {
+    color: #ff524b;
+  }
 }
 
-.options {
+.profileWrapper {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+  @media screen and (min-width: 720px) {
+    padding: unset;
+  }
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  @media screen and (min-width: 720px) {
+    flex-direction: row;
+    align-items: center;
+    min-width: 180px;
+  }
+}
+
+.settingsBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+  @media screen and (min-width: 720px) {
+    margin-bottom: unset;
+  }
 }
 
 .icon {
-  fill: #ff524b;
+  fill: #eaeaec;
   transition: fill 300ms linear;
 }
 
-.icon:hover {
-  background-color: #f16965;
+.profileBtn:hover .icon {
+  fill: #f16965;
 }
 
-.burger {
+.closeBtn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  color: #eaeaec;
   position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 38px;
-  right: 38px;
+  top: 5px;
+  right: 0;
+  cursor: pointer;
+
+  @media screen and (min-width: 720px) {
+    display: block;
+  }
 }
 
-.burger:hover .icon {
-  fill: #ee8884;
+.options {
+  position: absolute;
+  right: 12px;
+  @media screen and (min-width: 720px) {
+    background-color: #ff524b;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    height: 175px;
+    width: 175px;
+    border-bottom-left-radius: 100%;
+  }
 }
 
-.crossButton {
-  height: 24px;
-  width: 24px;
-}
-
-.cross {
-  background: #bdc3c7;
-}
-
-.menu {
-  background: #ff524b;
-  font-size: 1.15em;
-  overflow: hidden !important;
-  border-bottom-left-radius: 100%;
-}
-
-.morphShape {
-  fill: #373a47;
-}
-
-.itemList {
-  padding-top: 2em;
-  padding-right: 0.8em;
-}
-
-.item {
-  display: flex !important;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.overlay {
-  background: transparent !important;
-}
-
-.button {
+.buttonClose {
   width: 80px;
   height: 28px;
   border: 1px solid #000;
@@ -94,32 +116,32 @@
   width: 100%;
   height: 100%;
 }
-.button:before,
-.button:after {
+.buttonClose:before,
+.buttonClose:after {
   position: absolute;
   content: '';
   height: 0%;
   width: 1px;
   background: #000;
 }
-.button:before {
+.buttonClose:before {
   right: 0;
   top: 0;
   transition: all 500ms ease;
 }
-.button:after {
+.buttonClose:after {
   left: 0;
   bottom: 0;
   transition: all 500ms ease;
 }
-.button:hover {
+.buttonClose:hover {
   color: #000;
 }
-.button:hover:before {
+.buttonClose:hover:before {
   transition: all 500ms ease;
   height: 100%;
 }
-.button:hover:after {
+.buttonClose:hover:after {
   transition: all 500ms ease;
   height: 100%;
 }

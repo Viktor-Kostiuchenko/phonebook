@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import ContactsView from 'views/ContactsView';
 import HomeView from 'views/HomeView/HomeView';
-import RegisterView from 'views/RegisterView';
-import LoginView from 'views/LoginView';
+import RegisterView from 'views/RegisterView/RegisterView';
+import LoginView from 'views/LoginView/LoginView';
 import Header from 'components/Header';
 import { authOperations } from 'redux/auth';
 

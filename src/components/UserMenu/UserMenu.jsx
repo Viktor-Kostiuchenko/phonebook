@@ -1,59 +1,62 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSelectors, authOperations } from '../../redux/auth';
 import { useTranslation } from 'react-i18next';
-import { slide as Menu } from 'react-burger-menu';
 import Languages from 'components/Languages';
 import Theme from 'components/Theme';
 import Icons from 'images/icons/sprite.svg';
 import s from './UserMenu.module.scss';
 
 export default function UserMenu() {
+  const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getUsername);
   const { t } = useTranslation();
-  const styles = {
-    bmMenuWrap: {
-      position: 'fixed',
-      height: '200px',
-      width: '200px',
-      top: '0',
-    },
-  };
+
   return (
     <>
-      <div className={s.nameBox}>
-        {t('user')}, <span className={s.name}>{name}</span>
-      </div>
-      <Menu
-        styles={styles}
-        right
-        customBurgerIcon={
-          <svg width="35" height="35" className={s.icon}>
-            <use xlinkHref={`${Icons}#user`}></use>
-          </svg>
-        }
-        burgerButtonClassName={s.burger}
-        burgerBarClassName={s.burgerBars}
-        crossButtonClassName={s.crossButton}
-        crossClassName={s.cross}
-        menuClassName={s.menu}
-        morphShapeClassName={s.morphShape}
-        itemListClassName={s.itemList}
-        itemClassName={s.item}
-        overlayClassName={s.overlay}
-      >
-        <div className={s.options}>
-          <Languages />
-          <Theme />
+      <div className={s.profileWrapper}>
+        <div className={s.nameBox}>
+          {t('user')}, <span className={s.name}>{name}</span>
+        </div>
+        <div className={s.buttonBox}>
           <button
-            className={s.button}
+            type="button"
+            className={s.settingsBtn}
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            <svg width="35" height="35" className={s.icon}>
+              <use xlinkHref={`${Icons}#settings`}></use>
+            </svg>
+          </button>
+          <button
+            className={s.buttonClose}
             type="button"
             onClick={() => dispatch(authOperations.logOut())}
           >
             <span className={s.buttonName}>{t('out')} </span>
           </button>
         </div>
-      </Menu>
+        {open && (
+          <div className={s.options}>
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+              }}
+              className={s.closeBtn}
+            >
+              <svg width="20" height="20" className={s.icon}>
+                <use xlinkHref={`${Icons}#close`}></use>
+              </svg>
+            </button>
+            <Languages />
+            <Theme />
+          </div>
+        )}
+      </div>
     </>
   );
 }

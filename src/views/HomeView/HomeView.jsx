@@ -1,28 +1,14 @@
 import React from 'react';
-
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
-};
+import s from './HomeView.module.scss';
 
 export default function HomeView() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>
-        Приветственная страница нашего сервиса{' '}
-        <span role="img" aria-label="Иконка приветствия">
-          💁‍♀️
-        </span>
-      </h1>
+    <div className={s.container} id="homeView">
+      <div className={s.quote}>
+        <h2 className={s.title}>Just</h2>
+        <h2 className={s.title}>Be</h2>
+        <h2 className={s.title}>Closer</h2>
+      </div>
     </div>
   );
 }

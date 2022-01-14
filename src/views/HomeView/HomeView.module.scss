@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url('../../images/home.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 80px;
+  text-align: center;
+  color: #eaeaec;
+  text-align: right;
+  @media screen and (min-width: 720px) {
+    font-size: 150px;
+  }
+}
+
+.quote {
+  padding: 60px;
+}
