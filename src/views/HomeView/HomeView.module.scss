@@ -5,8 +5,8 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  background-image: url('../../images/home.jpg');
+  justify-content: flex-start;
+  background-image: url('../../images/home-view.jpg');
   background-position: center center;
   background-size: cover;
 }
@@ -15,11 +15,14 @@
   font-weight: 700;
   font-size: 85px;
   text-align: center;
-  color: #eaeaec;
-  text-align: right;
-  line-height: 1.5;
+  color: #ff524b;
+  text-align: left;
+  line-height: 1.2;
+  @media screen and (min-width: 414px) {
+    font-size: 100px;
+  }
   @media screen and (min-width: 720px) {
-    line-height: 1;
+    line-height: 1.1;
     font-size: 130px;
   }
 }
