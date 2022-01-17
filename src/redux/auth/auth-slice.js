@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import authOperations from './auth-operations';
+import { changeTheme } from './auth-actions';
 
 const initialState = {
   user: { name: null, email: null },
   token: null,
   isLoggedIn: false,
   isFetchingCurrentUser: false,
+  darkTheme: false,
 };
 
 const authSlice = createSlice({
@@ -20,7 +22,11 @@ const authSlice = createSlice({
     [authOperations.logIn.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
+      state.darkTheme = action.payload.darkTheme;
       state.isLoggedIn = true;
+    },
+    [authOperations.logIn.rejected](state, action) {
+      return action;
     },
     [authOperations.logOut.fulfilled](state, action) {
       state.user = { name: null, email: null };
@@ -37,6 +43,9 @@ const authSlice = createSlice({
     },
     [authOperations.fetchCurrentUser.rejected](state) {
       state.isFetchingCurrentUser = false;
+    },
+    [changeTheme](state, action) {
+      state.darkTheme = action.payload;
     },
   },
 });

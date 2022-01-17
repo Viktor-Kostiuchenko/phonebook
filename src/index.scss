@@ -21,7 +21,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #1a1a1b;
+  color: #231f20;
 }
 
 body.dark {
@@ -41,10 +41,12 @@ body.dark {
   background-repeat: no-repeat;
   color: #eaeaec;
 
+  // страница homeview
   #homeView {
     background-image: url('images/home-dark.jpg');
   }
 
+  // навигация
   #home,
   #contacts,
   #register,
@@ -65,10 +67,17 @@ body.dark {
   }
 
   // формы
+
   #form input:focus ~ label,
   #loginForm input:focus ~ label,
   #regForm input:focus ~ label {
     color: #eaeaec;
+  }
+
+  #form input:focus,
+  #loginForm input:focus,
+  #regForm input:focus {
+    border-color: #eaeaec;
   }
 
   #formName,
@@ -83,9 +92,10 @@ body.dark {
   #formBtn,
   #filterBtn,
   #regFormBtn,
-  #loginFormBtn {
+  #loginFormBtn,
+  #logoutBtn {
     background-color: #eaeaec;
-    color: #1a1a1b;
+    color: #231f20;
   }
 
   // инпут фильтра
@@ -119,6 +129,52 @@ body.dark {
   }
   #contactsList button {
     border-color: #eaeaec;
+  }
+
+  // иконки "опции"
+  #closeIcon,
+  #settingsIcon {
+    fill: #eaeaec;
+  }
+
+  // языки
+  #selectedLang {
+    border-color: #eaeaec;
+    filter: grayscale(0%);
+  }
+  #langId:hover {
+    border-color: #eaeaec;
+  }
+
+  // темы
+  #switchTrack {
+    border-color: #eaeaec;
+  }
+  #switchMarker {
+    background-color: #eaeaec;
+  }
+
+  #theme-switch-toggle:checked + #switchTrack {
+    border-color: #eaeaec;
+  }
+
+  #theme-switch-toggle:checked ~ #switchMarker {
+    background-color: #eaeaec;
+  }
+
+  #lightIcon,
+  #darkIcon {
+    fill: #eaeaec;
+  }
+
+  // мобильное меню
+  #mobileMenu .bm-cross {
+    background: #eaeaec !important;
+  }
+
+  // имя пользователя
+  #userName {
+    color: #eaeaec;
   }
 }
 

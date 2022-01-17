@@ -8,7 +8,7 @@ import {
   changeContactNumber,
   orderContacts,
 } from './contacts-operations';
-import { changeFilter, changeTheme } from './contacts-actions';
+import { changeFilter } from './contacts-actions';
 
 const items = createReducer([], {
   [fetchContacts.fulfilled]: (_, { payload }) => payload,
@@ -36,10 +36,6 @@ const items = createReducer([], {
 
 const filter = createReducer('', {
   [changeFilter]: (_, { payload }) => payload,
-});
-
-const darkTheme = createReducer(false, {
-  [changeTheme]: (_, { payload }) => payload,
 });
 
 const loading = createReducer(false, {
@@ -75,7 +71,6 @@ const error = createReducer(null, {
 export default combineReducers({
   items,
   filter,
-  darkTheme,
   loading,
   error,
 });

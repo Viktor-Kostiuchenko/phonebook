@@ -41,6 +41,7 @@ export default function Header() {
         <Menu
           right
           styles={styles}
+          id="mobileMenu"
           noOverlay
           burgerButtonClassName={s.burger}
           burgerBarClassName={s.burgerBars}

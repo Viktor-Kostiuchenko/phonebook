@@ -8,7 +8,6 @@ import s from './LoginView.module.scss';
 
 export default function LoginView() {
   const { t } = useTranslation();
-  // const contacts = useSelector(selectors.getContacts);
   const dispatch = useDispatch();
   const {
     register,

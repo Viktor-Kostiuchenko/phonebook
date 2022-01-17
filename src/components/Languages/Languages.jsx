@@ -16,6 +16,7 @@ export default function Languages() {
               className={`${s.button} ${
                 i18n.resolvedLanguage === lang && s.selected
               }`}
+              id={i18n.resolvedLanguage === lang ? 'selectedLang' : 'langId'}
               onClick={() => i18n.changeLanguage(lang)}
             >
               <svg className={s.icon} width="25" height="25">

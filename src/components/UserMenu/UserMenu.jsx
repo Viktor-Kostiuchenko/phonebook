@@ -17,7 +17,10 @@ export default function UserMenu() {
     <>
       <div className={s.profileWrapper}>
         <div className={s.nameBox}>
-          {t('user')}, <span className={s.name}>{name}</span>
+          {t('user')},{' '}
+          <span className={s.name} id="userName">
+            {name}
+          </span>
         </div>
         <div className={s.buttonBox}>
           <button
@@ -27,12 +30,13 @@ export default function UserMenu() {
               setOpen(true);
             }}
           >
-            <svg width="35" height="35" className={s.icon}>
+            <svg width="35" height="35" className={s.icon} id="settingsIcon">
               <use xlinkHref={`${Icons}#settings`}></use>
             </svg>
           </button>
           <button
-            className={s.buttonClose}
+            className={s.logoutBtn}
+            id="logoutBtn"
             type="button"
             onClick={() => dispatch(authOperations.logOut())}
           >
@@ -48,7 +52,12 @@ export default function UserMenu() {
               }}
               className={s.closeBtn}
             >
-              <svg width="20" height="20" className={s.icon}>
+              <svg
+                width="20"
+                height="20"
+                className={s.closeIcon}
+                id="closeIcon"
+              >
                 <use xlinkHref={`${Icons}#close`}></use>
               </svg>
             </button>

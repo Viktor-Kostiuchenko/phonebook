@@ -48,7 +48,7 @@
   right: 0;
   width: 0;
   height: 2px;
-  background-color: #000;
+  background-color: #231f20;
   transition: 0.2s;
   transition-delay: 0.2s;
 }
@@ -67,7 +67,7 @@
   left: 0;
   width: 2px;
   height: 0;
-  background-color: #000;
+  background-color: #231f20;
   transition: 0.2s;
 }
 .input ~ .focusBorder i:after {
@@ -98,7 +98,7 @@
 .button {
   width: 100px;
   height: 28px;
-  border: 1px solid #000;
+  border: 1px solid #231f20;
   font-weight: 700;
   text-transform: uppercase;
   background: transparent;
@@ -107,8 +107,8 @@
   position: relative;
   display: inline-block;
 
-  background: #000;
-  color: #fff;
+  background: #231f20;
+  color: #eaeaec;
   line-height: 30px;
   letter-spacing: 0.05em;
   padding: 0;
@@ -127,7 +127,7 @@
   content: '';
   height: 0%;
   width: 1px;
-  background: #000;
+  background: #231f20;
 }
 .button:before {
   right: 0;
@@ -140,7 +140,7 @@
   transition: all 500ms ease;
 }
 .button:hover {
-  color: #000;
+  color: #231f20;
   background: transparent;
 }
 .button:hover:before {
@@ -155,7 +155,7 @@
 .buttonName:after {
   position: absolute;
   content: '';
-  background: #000;
+  background: #231f20;
 }
 .buttonName:before {
   left: 0;

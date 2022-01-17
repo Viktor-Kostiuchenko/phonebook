@@ -5,13 +5,13 @@ import Section from 'components/Section';
 import ContactForm from 'components/Form';
 import Filter from 'components/Filter';
 import ContactList from 'components/ContactList';
-import { operations } from 'redux/contacts';
+import { contactsOperations } from 'redux/contacts';
 import s from './ContactsView.module.scss';
 
 export default function ContactsView() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(operations.fetchContacts());
+    dispatch(contactsOperations.fetchContacts());
   }, [dispatch]);
 
   const { t } = useTranslation();

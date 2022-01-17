@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 import ContactItem from './ContactItem';
 import Stats from 'components/Stats';
 import Loader from 'components/Loader';
-import { selectors, operations } from 'redux/contacts';
+import { contactsSelectors, contactsOperations } from 'redux/contacts';
 import { dragContacts } from 'helpers/drag-contacts';
 import s from './ContactList.module.scss';
 
 export default function ContactList() {
-  const contacts = useSelector(selectors.getContacts);
-  const filteredContacts = useSelector(selectors.showFiltered);
-  const isLoading = useSelector(selectors.getLoading);
-  const filter = useSelector(selectors.getFilter);
+  const contacts = useSelector(contactsSelectors.getContacts);
+  const filteredContacts = useSelector(contactsSelectors.showFiltered);
+  const isLoading = useSelector(contactsSelectors.getLoading);
+  const filter = useSelector(contactsSelectors.getFilter);
   const dispatch = useDispatch();
-  const onDeleteContact = id => dispatch(operations.deleteContact(id));
+  const onDeleteContact = id => dispatch(contactsOperations.deleteContact(id));
 
   return (
     <>

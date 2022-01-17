@@ -7,29 +7,27 @@ import PrivateRoute from 'components/Routes/PrivateRoute';
 import PublicRoute from 'components/Routes/PublicRoute';
 import { authOperations, authSelectors } from 'redux/auth';
 
-import { useLocalStorage } from 'hooks/useLocalStorage';
-
 const HomeView = lazy(() => import('views/HomeView'));
 const RegisterView = lazy(() => import('views/RegisterView'));
 const LoginView = lazy(() => import('views/LoginView'));
 const ContactsView = lazy(() => import('views/ContactsView'));
 
 export default function App() {
-  const [darkMode, setDarkMode] = useLocalStorage('darkTheme', false);
+  const theme = useSelector(authSelectors.getTheme);
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(
     authSelectors.getIsFetchingCurrentUser,
   );
 
   useEffect(() => {
-    if (darkMode) {
+    if (theme) {
       document.body.classList.add('dark');
     } else {
       document.body.classList.remove('dark');
     }
 
     dispatch(authOperations.fetchCurrentUser());
-  }, [darkMode, dispatch]);
+  }, [dispatch, theme]);
 
   return (
     <>

@@ -3,13 +3,13 @@ import { useForm } from 'react-hook-form';
 import { yupContactSchema } from 'helpers/yup-schema';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
-import { selectors, operations } from 'redux/contacts';
+import { contactsSelectors, contactsOperations } from 'redux/contacts';
 import { notificate } from 'helpers/notifications';
 import s from './Form.module.scss';
 
 export default function ContactForm() {
   const { t } = useTranslation();
-  const contacts = useSelector(selectors.getContacts);
+  const contacts = useSelector(contactsSelectors.getContacts);
   const dispatch = useDispatch();
   const {
     register,
@@ -30,7 +30,7 @@ export default function ContactForm() {
       return;
     }
 
-    dispatch(operations.addContact({ name, number }));
+    dispatch(contactsOperations.addContact({ name, number }));
     reset();
   };
 

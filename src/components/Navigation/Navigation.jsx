@@ -6,6 +6,8 @@ import s from './Navigation.module.scss';
 export default function Navigation() {
   const activeStyle = {
     color: '#ff524b',
+    filter: 'brightness(2)',
+    borderBottom: '1px solid #ff524b',
   };
   const { t } = useTranslation();
   return (

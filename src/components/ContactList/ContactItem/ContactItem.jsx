@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import EdiText from 'react-editext';
-import { operations } from 'redux/contacts';
+import { contactsOperations } from 'redux/contacts';
 import Icons from 'images/icons/sprite.svg';
 import s from './ContactItem.module.scss';
 
@@ -15,11 +15,11 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
 
   const handleSaveName = id => value => {
     setNameValue(value);
-    dispatch(operations.changeContactName({ id, value }));
+    dispatch(contactsOperations.changeContactName({ id, value }));
   };
   const handleSaveNumber = id => value => {
     setNumberValue(value);
-    dispatch(operations.changeContactNumber({ id, value }));
+    dispatch(contactsOperations.changeContactNumber({ id, value }));
   };
   return (
     <>

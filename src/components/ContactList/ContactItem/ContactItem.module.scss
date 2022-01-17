@@ -38,8 +38,8 @@
   margin: 0;
   padding: 5px;
   background-color: transparent;
-  border: 2px solid #000;
-  color: #fff;
+  border: 2px solid #231f20;
+  color: #eaeaec;
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -51,7 +51,7 @@
   content: ' ';
   width: 0px;
   height: 2px;
-  background: black;
+  background: #231f20;
   top: 50%;
   left: 5px;
   position: absolute;
@@ -67,7 +67,7 @@
   text-align: center;
   transition: all 300ms ease-in-out;
   text-transform: uppercase;
-  color: black;
+  color: #231f20;
 }
 
 .topKey {
@@ -101,17 +101,17 @@
 }
 
 .button:hover {
-  color: white;
-  background: black;
+  color: #eaeaec;
+  background: #231f20;
 }
 
 .button:hover::before {
   width: 15px;
-  background: white;
+  background: #eaeaec;
 }
 
 .button:hover .buttonText {
-  color: white;
+  color: #eaeaec;
   padding-left: 20px;
 }
 
@@ -152,7 +152,7 @@
 }
 
 button[editext='edit-button'] {
-  color: #000;
+  color: #231f20;
   width: 20px;
   height: 20px;
   display: flex;

@@ -8,10 +8,8 @@
 
 .name {
   font-size: 20px;
-  color: #eaeaec;
-  @media screen and (min-width: 720px) {
-    color: #ff524b;
-  }
+  color: #231f20;
+  font-weight: 700;
 }
 
 .profileWrapper {
@@ -42,7 +40,7 @@
   border: none;
   cursor: pointer;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 130px;
   padding: 0;
   @media screen and (min-width: 720px) {
     margin-bottom: unset;
@@ -50,7 +48,12 @@
 }
 
 .icon {
-  fill: #eaeaec;
+  fill: #231f20;
+  transition: fill 300ms linear;
+}
+
+.closeIcon {
+  fill: #231f20;
   transition: fill 300ms linear;
 }
 
@@ -90,10 +93,10 @@
   }
 }
 
-.buttonClose {
+.logoutBtn {
   width: 80px;
   height: 28px;
-  border: 1px solid #000;
+  border: 1px solid #231f20;
   font-weight: 700;
   text-transform: uppercase;
   background: transparent;
@@ -102,8 +105,8 @@
   position: relative;
   display: inline-block;
 
-  background-color: #eaeaec;
-  color: #1a1a1b;
+  background: #231f20;
+  color: #eaeaec;
   line-height: 30px;
   letter-spacing: 0.05em;
   padding: 0;
@@ -122,7 +125,7 @@
   content: '';
   height: 0%;
   width: 1px;
-  background: #000;
+  background: #231f20;
 }
 .buttonClose:before {
   right: 0;
@@ -135,7 +138,7 @@
   transition: all 500ms ease;
 }
 .buttonClose:hover {
-  color: #000;
+  color: #231f20;
 }
 .buttonClose:hover:before {
   transition: all 500ms ease;
@@ -149,7 +152,7 @@
 .buttonName:after {
   position: absolute;
   content: '';
-  background: #000;
+  background: #231f20;
 }
 .buttonName:before {
   left: 0;

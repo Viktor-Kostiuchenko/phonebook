@@ -4,8 +4,8 @@
   justify-content: center;
 }
 
-.darkIcon {
-  fill: #eaeaec;
+.icon {
+  fill: #231f20;
 }
 
 .switchControl {
@@ -39,7 +39,7 @@
   user-select: none;
   border-radius: inherit;
   border: 2px solid;
-  border-color: #eaeaec;
+  border-color: #231f20;
   z-index: 1;
   cursor: pointer;
   transition: border-color 250ms ease-in-out;
@@ -47,7 +47,7 @@
 
 .switchMarker {
   position: relative;
-  background-color: #eaeaec;
+  background-color: #231f20;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -59,10 +59,10 @@
 }
 
 .switchToggle:checked + .switchTrack {
-  border-color: #eaeaec;
+  border-color: #231f20;
 }
 
 .switchToggle:checked ~ .switchMarker {
   transform: translateX(20px);
-  background-color: #eaeaec;
+  background-color: #231f20;
 }

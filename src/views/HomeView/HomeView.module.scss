@@ -3,7 +3,6 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  min-height: calc(100vh - 50px);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -14,15 +13,20 @@
 
 .title {
   font-weight: 700;
-  font-size: 80px;
+  font-size: 85px;
   text-align: center;
   color: #eaeaec;
   text-align: right;
+  line-height: 1.5;
   @media screen and (min-width: 720px) {
-    font-size: 150px;
+    line-height: 1;
+    font-size: 130px;
   }
 }
 
 .quote {
-  padding: 60px;
+  padding: 0px 20px;
+  @media screen and (min-width: 720px) {
+    padding: 0px 60px;
+  }
 }

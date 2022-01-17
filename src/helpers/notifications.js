@@ -4,6 +4,10 @@ export function notificate(contact) {
   return Notiflix.Notify.warning(`${contact} is already in contacts`);
 }
 
+export function loginError() {
+  return Notiflix.Notify.warning('Login failed. Perhaps you are not registred');
+}
+
 Notiflix.Notify.init({
   width: '280px',
   position: 'center-top',
