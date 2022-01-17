@@ -137,6 +137,10 @@ body.dark {
     fill: #eaeaec;
   }
 
+  #settingsBtn:hover {
+    filter: brightness(0.5);
+  }
+
   // языки
   #selectedLang {
     border-color: #eaeaec;

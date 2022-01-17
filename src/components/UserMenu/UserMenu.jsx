@@ -26,6 +26,7 @@ export default function UserMenu() {
           <button
             type="button"
             className={s.settingsBtn}
+            id="settingsBtn"
             onClick={() => {
               setOpen(true);
             }}

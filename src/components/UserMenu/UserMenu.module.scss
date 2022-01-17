@@ -42,10 +42,16 @@
   margin: 0;
   margin-bottom: 130px;
   padding: 0;
+  filter: brightness(1);
+  transition: filter 200ms linear;
   @media screen and (min-width: 720px) {
     margin-bottom: unset;
     margin-right: 20px;
   }
+}
+
+.settingsBtn:hover {
+  filter: brightness(3);
 }
 
 .icon {
