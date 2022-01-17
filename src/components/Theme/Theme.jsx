@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { actions } from 'redux/contacts';
-import { useLocalStorage } from 'components/hooks/useLocalStorage';
+import { useLocalStorage } from 'hooks/useLocalStorage';
 import Icons from 'images/icons/sprite.svg';
 import s from './Theme.module.scss';
 

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import { yupSchema } from 'helpers/yup-schema';
+import { yupContactSchema } from 'helpers/yup-schema';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
 import { selectors, operations } from 'redux/contacts';
@@ -17,7 +17,7 @@ export default function ContactForm() {
     formState: { errors },
     reset,
     watch,
-  } = useForm({ resolver: yupResolver(yupSchema) });
+  } = useForm({ resolver: yupResolver(yupContactSchema) });
 
   const onSubmitHandler = ({ name, number }) => {
     const nameDublicate = contacts.find(contact => contact.name === name);

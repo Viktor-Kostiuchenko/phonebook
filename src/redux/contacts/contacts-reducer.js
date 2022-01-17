@@ -38,7 +38,7 @@ const filter = createReducer('', {
   [changeFilter]: (_, { payload }) => payload,
 });
 
-const darkTheme = createReducer('', {
+const darkTheme = createReducer(false, {
   [changeTheme]: (_, { payload }) => payload,
 });
 

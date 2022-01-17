@@ -45,6 +45,18 @@ body.dark {
     background-image: url('images/home-dark.jpg');
   }
 
+  #home,
+  #contacts,
+  #register,
+  #login {
+    color: #eaeaec;
+  }
+
+  #register.activeLink,
+  #login.activeLink {
+    color: #ff524b;
+  }
+
   #contactsList svg {
     fill: #eaeaec;
   }
@@ -52,16 +64,26 @@ body.dark {
     filter: brightness(2);
   }
 
-  // форма "добавить контакт"
-  #form input:focus ~ label {
+  // формы
+  #form input:focus ~ label,
+  #loginForm input:focus ~ label,
+  #regForm input:focus ~ label {
     color: #eaeaec;
   }
+
   #formName,
+  #regFormName,
+  #regFormEmail,
+  #regFormPassword,
+  #loginFormEmail,
+  #loginFormPassword,
   #formNumber {
     color: #eaeaec;
   }
   #formBtn,
-  #filterBtn {
+  #filterBtn,
+  #regFormBtn,
+  #loginFormBtn {
     background-color: #eaeaec;
     color: #1a1a1b;
   }

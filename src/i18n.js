@@ -6,9 +6,13 @@ const resources = {
   en: {
     translation: {
       home: 'Home',
+      registrtation: 'Sign Up',
+      logIn: 'Log in',
       in: 'Log in',
       out: 'Log out',
-      reg: 'Registration',
+      email: 'Email',
+      password: 'Password',
+      reg: 'Sign Up',
       user: 'Welcome',
       phonebook: 'Phonebook',
       name: 'Name',
@@ -24,7 +28,12 @@ const resources = {
   uk: {
     translation: {
       home: 'Головна',
+      registrtation: 'Реєстрація',
+      logIn: 'Вхід',
       in: 'Увійти',
+      out: 'Вийти',
+      email: 'Ел.пошта',
+      password: 'Пароль',
       reg: 'Зареєструватися',
       user: 'Вітаємо',
       phonebook: 'Телефонна книга',
@@ -36,15 +45,18 @@ const resources = {
       delete: 'Видалити',
       clear: 'Очистити',
       total: 'Контакти:',
-      out: 'Вийти',
     },
   },
   ru: {
     translation: {
       home: 'Главная',
-      reg: 'Зарегистрироваться',
+      registrtation: 'Регистрация',
+      logIn: 'Вход',
       in: 'Войти',
       out: 'Выйти',
+      email: 'Ел.почта',
+      password: 'Пароль',
+      reg: 'Зарегистрироваться',
       user: 'Приветствуем',
       phonebook: 'Телефонная книга',
       name: 'Имя',

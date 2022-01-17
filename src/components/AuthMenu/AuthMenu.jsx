@@ -1,37 +1,30 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-const styles = {
-  link: {
-    display: 'inline-block',
-    textDecoration: 'none',
-    padding: 12,
-    fontWeight: 700,
-    color: '#2A363B',
-  },
-  activeLink: {
-    color: '#E84A5F',
-  },
-};
+import s from './AuthMenu.module.scss';
 
 export default function AuthMenu() {
+  const activeStyle = {
+    color: '#ff524b',
+  };
   const { t } = useTranslation();
   return (
     <div>
       <NavLink
         to="/register"
         exact
-        style={styles.link}
-        activeStyle={styles.activeLink}
+        className={s.link}
+        id="register"
+        activeStyle={activeStyle}
       >
         {t('reg')}
       </NavLink>
       <NavLink
         to="/login"
         exact
-        style={styles.link}
-        activeStyle={styles.activeLink}
+        className={s.link}
+        id="login"
+        activeStyle={activeStyle}
       >
         {t('in')}
       </NavLink>
