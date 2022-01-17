@@ -16,12 +16,12 @@ export default function UserMenu() {
   return (
     <>
       <div className={s.profileWrapper}>
-        <div className={s.nameBox}>
+        <p className={s.nameBox}>
           {t('user')},{' '}
           <span className={s.name} id="userName">
             {name}
           </span>
-        </div>
+        </p>
         <div className={s.buttonBox}>
           <button
             type="button"

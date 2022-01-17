@@ -1,6 +1,7 @@
 .nameBox {
   position: absolute;
   top: 10px;
+  left: 10px;
   @media screen and (min-width: 720px) {
     position: static;
   }
@@ -31,7 +32,6 @@
   @media screen and (min-width: 720px) {
     flex-direction: row;
     align-items: center;
-    min-width: 180px;
   }
 }
 
@@ -44,6 +44,7 @@
   padding: 0;
   @media screen and (min-width: 720px) {
     margin-bottom: unset;
+    margin-right: 20px;
   }
 }
 
@@ -119,32 +120,33 @@
   width: 100%;
   height: 100%;
 }
-.buttonClose:before,
-.buttonClose:after {
+.logoutBtn:before,
+.logoutBtn:after {
   position: absolute;
   content: '';
   height: 0%;
   width: 1px;
   background: #231f20;
 }
-.buttonClose:before {
+.logoutBtn:before {
   right: 0;
   top: 0;
   transition: all 500ms ease;
 }
-.buttonClose:after {
+.logoutBtn:after {
   left: 0;
   bottom: 0;
   transition: all 500ms ease;
 }
-.buttonClose:hover {
+.logoutBtn:hover {
   color: #231f20;
+  background: transparent;
 }
-.buttonClose:hover:before {
+.logoutBtn:hover:before {
   transition: all 500ms ease;
   height: 100%;
 }
-.buttonClose:hover:after {
+.logoutBtn:hover:after {
   transition: all 500ms ease;
   height: 100%;
 }

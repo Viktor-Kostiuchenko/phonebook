@@ -27,7 +27,7 @@ export const yupLoginSchema = Yup.object().shape({
 export const yupRegisterSchema = Yup.object().shape({
   name: Yup.string()
     .min(2, 'Too Short!')
-    .max(20, 'Too Long!')
+    .max(15, 'Too Long!')
     .matches(
       /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/,
       "Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan",

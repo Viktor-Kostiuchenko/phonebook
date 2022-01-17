@@ -5,7 +5,7 @@ export function notificate(contact) {
 }
 
 export function loginError() {
-  return Notiflix.Notify.warning('Login failed. Perhaps you are not registred');
+  return Notiflix.Notify.warning('Login failed. Check entered data');
 }
 
 Notiflix.Notify.init({
