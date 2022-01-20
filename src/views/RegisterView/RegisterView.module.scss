@@ -15,6 +15,7 @@
 
 .inputBox {
   position: relative;
+  display: flex;
   padding: 15px 0 0;
   margin-bottom: 50px;
   width: 200px;
@@ -23,7 +24,7 @@
 .input {
   font-family: inherit;
   border: 0;
-  border-bottom: 2px solid #9b9b9b;
+  border-bottom: 2px solid #6b6a6a;
   outline: 0;
   font-size: 1.1rem;
   color: #231f20;
@@ -38,7 +39,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: #9b9b9b;
+  color: #6b6a6a;
 }
 
 .input:focus {
@@ -145,6 +146,16 @@
 }
 .buttonName:hover:after {
   width: 100%;
+}
+
+.showPasswordBtn {
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
 .button[disabled] {

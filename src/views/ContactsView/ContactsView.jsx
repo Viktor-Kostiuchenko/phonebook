@@ -16,7 +16,7 @@ export default function ContactsView() {
 
   const { t } = useTranslation();
   return (
-    <main className={s.main}>
+    <div className={s.contacts} id="contacts">
       <Section title={t('phonebook')}>
         <ContactForm />
       </Section>
@@ -25,6 +25,6 @@ export default function ContactsView() {
         <Filter />
         <ContactList />
       </Section>
-    </main>
+    </div>
   );
 }

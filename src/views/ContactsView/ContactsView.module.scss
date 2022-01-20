@@ -1,33 +1,48 @@
-.main {
-  position: relative;
-  max-width: 100%;
+.contacts {
   margin-left: auto;
   margin-right: auto;
+  min-height: 100vh;
   padding: 20px;
-  min-height: 640px;
-  box-sizing: border-box;
-  width: 320px;
   padding-top: 110px;
-}
+  box-sizing: border-box;
+  background-image: url('../../images/phone-mobile.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #231f20;
 
-@media screen and (min-width: 440px) {
-  .main {
-    width: 440px;
+  @media screen and (min-width: 500px) {
+    background-image: url('../../images/phone-tablet.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-}
 
-@media screen and (min-width: 720px) {
-  .main {
+  @media screen and (min-width: 720px) {
     display: flex;
     justify-content: space-between;
-    width: 720px;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .main {
+  @media screen and (min-width: 875px) {
+    background-image: url('../../images/phone-tablet.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: 1024px) {
     padding-left: 60px;
     padding-right: 60px;
-    width: 1024px;
+  }
+
+  @media screen and (min-width: 1170px) {
+    background-image: url('../../images/phone-desktop.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
