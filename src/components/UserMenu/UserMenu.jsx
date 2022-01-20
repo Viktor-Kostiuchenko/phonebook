@@ -16,11 +16,8 @@ export default function UserMenu() {
   return (
     <>
       <div className={s.profileWrapper}>
-        <p className={s.nameBox}>
-          {t('user')},{' '}
-          <span className={s.name} id="userName">
-            {name}
-          </span>
+        <p className={s.nameBox} id="userName">
+          {t('user')}, <span className={s.name}>{name}</span>
         </p>
         <div className={s.buttonBox}>
           <button

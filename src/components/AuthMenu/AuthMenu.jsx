@@ -5,9 +5,8 @@ import s from './AuthMenu.module.scss';
 
 export default function AuthMenu() {
   const activeStyle = {
-    color: '#ff524b',
-    filter: 'brightness(2)',
-    borderBottom: '1px solid #ff524b',
+    color: '#c01919',
+    borderBottom: '1px solid #c01919',
   };
   const { t } = useTranslation();
   return (

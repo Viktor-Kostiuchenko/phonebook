@@ -23,13 +23,14 @@ const register = createAsyncThunk('auth/register', async credentials => {
   }
 });
 
-const logIn = createAsyncThunk('auth/login', async credentials => {
+const logIn = createAsyncThunk('auth/login', async (payload, thunkAPI) => {
   try {
-    const { data } = await axios.post('/users/login', credentials);
+    const { data } = await axios.post('/users/login', payload);
     token.set(data.token);
     return data;
   } catch (error) {
     loginError();
+    return thunkAPI.rejectWithValue();
   }
 });
 
@@ -47,16 +48,13 @@ const fetchCurrentUser = createAsyncThunk(
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    if (persistedToken === null) {
-      return thunkAPI.rejectWithValue();
-    }
 
     token.set(persistedToken);
     try {
       const { data } = await axios.get('/users/current');
       return data;
     } catch (error) {
-      // TODO: Добавить обработку ошибки error.message
+      return thunkAPI.rejectWithValue();
     }
   },
 );

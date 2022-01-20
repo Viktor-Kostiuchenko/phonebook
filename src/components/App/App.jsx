@@ -6,6 +6,7 @@ import Loader from 'components/Loader';
 import PrivateRoute from 'components/Routes/PrivateRoute';
 import PublicRoute from 'components/Routes/PublicRoute';
 import { authOperations, authSelectors } from 'redux/auth';
+import s from './App.module.scss';
 
 const HomeView = lazy(() => import('views/HomeView'));
 const RegisterView = lazy(() => import('views/RegisterView'));
@@ -32,7 +33,7 @@ export default function App() {
   return (
     <>
       {!isFetchingCurrentUser && (
-        <>
+        <div className={s.app} id="app">
           <Header />
           <Switch>
             <Suspense fallback={<Loader />}>
@@ -55,7 +56,7 @@ export default function App() {
               </PrivateRoute>
             </Suspense>
           </Switch>
-        </>
+        </div>
       )}
     </>
   );

@@ -42,12 +42,12 @@ export default function Header() {
           right
           styles={styles}
           id="mobileMenu"
-          noOverlay
           burgerButtonClassName={s.burger}
           burgerBarClassName={s.burgerBars}
           crossButtonClassName={s.crossButton}
           crossClassName={s.cross}
           menuClassName={s.menu}
+          overlayClassName={s.overlay}
         >
           <Navigation />
           {isLoggedIn ? <UserMenu /> : <AuthMenu />}
