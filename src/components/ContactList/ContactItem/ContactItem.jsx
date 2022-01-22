@@ -25,12 +25,12 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
     <>
       <div className={s.infoWrapper}>
         <svg className={s.icon} width="25" height="25">
-          <use xlinkHref={`${Icons}#drag`}></use>
+          <use xlinkHref={`${Icons}#drag`} />
         </svg>
         <ul className={s.info}>
           <li className={s.item}>
             <svg className={s.icon} width="18" height="18">
-              <use xlinkHref={`${Icons}#book`}></use>
+              <use xlinkHref={`${Icons}#book`} />
             </svg>
             <EdiText
               value={nameValue}
@@ -42,7 +42,7 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
           </li>
           <li className={s.item}>
             <svg className={`${s.icon} ${s.animation}`} width="18" height="18">
-              <use xlinkHref={`${Icons}#mobile`}></use>
+              <use xlinkHref={`${Icons}#mobile`} />
             </svg>
             <EdiText
               value={numberValue}

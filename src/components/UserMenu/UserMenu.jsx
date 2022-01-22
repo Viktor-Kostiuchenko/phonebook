@@ -29,7 +29,7 @@ export default function UserMenu() {
             }}
           >
             <svg width="35" height="35" className={s.icon} id="settingsIcon">
-              <use xlinkHref={`${Icons}#settings`}></use>
+              <use xlinkHref={`${Icons}#settings`} />
             </svg>
           </button>
           <button
@@ -56,7 +56,7 @@ export default function UserMenu() {
                 className={s.closeIcon}
                 id="closeIcon"
               >
-                <use xlinkHref={`${Icons}#close`}></use>
+                <use xlinkHref={`${Icons}#close`} />
               </svg>
             </button>
             <Languages />

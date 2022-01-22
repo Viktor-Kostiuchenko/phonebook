@@ -34,7 +34,7 @@ export default function ContactForm() {
     reset();
   };
 
-  const emtyStr = watch('name') === '' && watch('number') === '';
+  const emptyStr = watch('name') === '' && watch('number') === '';
   const undefinedSrt =
     watch('name') === undefined && watch('number') === undefined;
 
@@ -68,7 +68,7 @@ export default function ContactForm() {
         id="formBtn"
         className={s.button}
         type="submit"
-        disabled={emtyStr || undefinedSrt}
+        disabled={emptyStr || undefinedSrt}
       >
         <span className={s.buttonName}>{t('add')}</span>
       </button>

@@ -10,12 +10,12 @@ import { authSelectors } from 'redux/auth';
 import s from './Header.module.scss';
 
 export default function Header() {
-  const [windowSize, setWindoSize] = useState(0);
+  const [windowSize, setWindowSize] = useState(0);
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
   useEffect(() => {
     const updateSize = () => {
-      setWindoSize(window.innerWidth);
+      setWindowSize(window.innerWidth);
     };
     window.addEventListener('resize', updateSize);
     updateSize();

@@ -16,12 +16,11 @@ export default function Theme() {
   return (
     <div className={s.switcher}>
       <svg className={s.icon} id="lightIcon" width="28" height="28">
-        <use xlinkHref={`${Icons}#light`}></use>
+        <use xlinkHref={`${Icons}#light`} />
       </svg>
       <div className={s.switchControl}>
         <input
           className={s.switchToggle}
-          // id="switchToggle"
           onChange={() => setDarkMode(!darkMode)}
           type="checkbox"
           name="theme"
@@ -34,15 +33,11 @@ export default function Theme() {
           className={s.switchTrack}
           id="switchTrack"
           htmlFor="theme-switch-toggle"
-        ></label>
-        <div
-          aria-hidden="true"
-          className={s.switchMarker}
-          id="switchMarker"
-        ></div>
+        />
+        <div aria-hidden="true" className={s.switchMarker} id="switchMarker" />
       </div>
       <svg className={s.icon} id="darkIcon" width="28" height="28">
-        <use xlinkHref={`${Icons}#dark`}></use>
+        <use xlinkHref={`${Icons}#dark`} />
       </svg>
     </div>
   );

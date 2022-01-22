@@ -29,7 +29,7 @@ export default function RegisterView() {
     setPasswordShown(!passwordShown);
   };
 
-  const emtyStr =
+  const emptyStr =
     watch('email') === '' && watch('password') === '' && watch('name') === '';
   const undefinedSrt =
     watch('email') === undefined &&
@@ -74,7 +74,6 @@ export default function RegisterView() {
           <div>
             <input
               className={s.input}
-              // type="password"
               type={passwordShown ? 'text' : 'password'}
               {...register('password')}
               id="regFormPassword"
@@ -91,7 +90,7 @@ export default function RegisterView() {
           >
             {!passwordShown && (
               <svg width="20" height="20" className={s.icon} id="regIconShown">
-                <use xlinkHref={`${Icons}#eye`}></use>
+                <use xlinkHref={`${Icons}#eye`} />
               </svg>
             )}
             {passwordShown && (
@@ -101,7 +100,7 @@ export default function RegisterView() {
                 className={s.icon}
                 id="regIconShownSlash"
               >
-                <use xlinkHref={`${Icons}#eye-slash`}></use>
+                <use xlinkHref={`${Icons}#eye-slash`} />
               </svg>
             )}
           </button>
@@ -110,7 +109,7 @@ export default function RegisterView() {
           id="regFormBtn"
           className={s.button}
           type="submit"
-          disabled={emtyStr || undefinedSrt}
+          disabled={emptyStr || undefinedSrt}
         >
           <span className={s.buttonName}>{t('reg')}</span>
         </button>

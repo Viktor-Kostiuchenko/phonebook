@@ -29,7 +29,7 @@ export default function LoginView() {
     setPasswordShown(!passwordShown);
   };
 
-  const emtyStr = watch('email') === '' && watch('password') === '';
+  const emptyStr = watch('email') === '' && watch('password') === '';
   const undefinedSrt =
     watch('email') === undefined && watch('password') === undefined;
 
@@ -77,7 +77,7 @@ export default function LoginView() {
           >
             {!passwordShown && (
               <svg width="20" height="20" className={s.icon} id="logIconShown">
-                <use xlinkHref={`${Icons}#eye`}></use>
+                <use xlinkHref={`${Icons}#eye`} />
               </svg>
             )}
             {passwordShown && (
@@ -87,7 +87,7 @@ export default function LoginView() {
                 className={s.icon}
                 id="logIconShownSlash"
               >
-                <use xlinkHref={`${Icons}#eye-slash`}></use>
+                <use xlinkHref={`${Icons}#eye-slash`} />
               </svg>
             )}
           </button>
@@ -96,7 +96,7 @@ export default function LoginView() {
           id="loginFormBtn"
           className={s.button}
           type="submit"
-          disabled={emtyStr || undefinedSrt}
+          disabled={emptyStr || undefinedSrt}
         >
           <span className={s.buttonName}>{t('in')}</span>
         </button>

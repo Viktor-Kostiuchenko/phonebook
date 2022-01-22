@@ -20,7 +20,7 @@ export default function Languages() {
               onClick={() => i18n.changeLanguage(lang)}
             >
               <svg className={s.icon} width="25" height="25">
-                <use xlinkHref={`${Icons}#${lang}`}></use>
+                <use xlinkHref={`${Icons}#${lang}`} />
               </svg>
             </button>
           </li>

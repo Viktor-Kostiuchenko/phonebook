@@ -31,24 +31,31 @@ export default function App() {
 
   return (
     <>
-      <Header />
       {!isFetchingCurrentUser && (
-        <Switch>
-          <Suspense fallback={<Loader />}>
-            <PublicRoute exact path="/">
-              <HomeView />
-            </PublicRoute>
-            <PublicRoute exact path="/register" restricted>
-              <RegisterView />
-            </PublicRoute>
-            <PublicRoute exact path="/login" redirectTo="/contacts" restricted>
-              <LoginView />
-            </PublicRoute>
-            <PrivateRoute exact path="/contacts" redirectTo="/login">
-              <ContactsView />
-            </PrivateRoute>
-          </Suspense>
-        </Switch>
+        <>
+          <Header />
+          <Switch>
+            <Suspense fallback={<Loader />}>
+              <PublicRoute exact path="/">
+                <HomeView />
+              </PublicRoute>
+              <PublicRoute exact path="/register" restricted>
+                <RegisterView />
+              </PublicRoute>
+              <PublicRoute
+                exact
+                path="/login"
+                redirectTo="/contacts"
+                restricted
+              >
+                <LoginView />
+              </PublicRoute>
+              <PrivateRoute exact path="/contacts" redirectTo="/login">
+                <ContactsView />
+              </PrivateRoute>
+            </Suspense>
+          </Switch>
+        </>
       )}
     </>
   );
