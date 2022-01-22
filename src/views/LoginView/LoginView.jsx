@@ -34,7 +34,7 @@ export default function LoginView() {
     watch('email') === undefined && watch('password') === undefined;
 
   return (
-    <div className={s.container}>
+    <div className={s.container} id="loginView">
       <h2 className={s.formTitle} id="logTitle">
         {t('logIn')}
       </h2>

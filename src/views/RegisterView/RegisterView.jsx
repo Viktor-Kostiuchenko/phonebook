@@ -37,7 +37,7 @@ export default function RegisterView() {
     watch('name') === undefined;
 
   return (
-    <div className={s.container}>
+    <div className={s.container} id="registerView">
       <h2 className={s.formTitle} id="regTitle">
         {t('registrtation')}
       </h2>

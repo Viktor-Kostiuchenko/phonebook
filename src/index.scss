@@ -33,8 +33,10 @@ ol {
 }
 
 body.dark {
-  // app
-  #app {
+  // views
+  #loginView,
+  #homeView,
+  #registerView {
     background-image: url('images/home-view-dark.jpg');
   }
 
