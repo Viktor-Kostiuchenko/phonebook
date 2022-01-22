@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { loginError } from 'helpers/notifications';
+import { loginError, registerError } from 'helpers/notifications';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
@@ -13,15 +13,19 @@ const token = {
   },
 };
 
-const register = createAsyncThunk('auth/register', async credentials => {
-  try {
-    const { data } = await axios.post('/users/signup', credentials);
-    token.set(data.token);
-    return data;
-  } catch (error) {
-    // TODO: Добавить обработку ошибки error.message
-  }
-});
+const register = createAsyncThunk(
+  'auth/register',
+  async (payload, thunkAPI) => {
+    try {
+      const { data } = await axios.post('/users/signup', payload);
+      token.set(data.token);
+      return data;
+    } catch (error) {
+      registerError();
+      return thunkAPI.rejectWithValue();
+    }
+  },
+);
 
 const logIn = createAsyncThunk('auth/login', async (payload, thunkAPI) => {
   try {
@@ -34,12 +38,12 @@ const logIn = createAsyncThunk('auth/login', async (payload, thunkAPI) => {
   }
 });
 
-const logOut = createAsyncThunk('auth/logout', async () => {
+const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
     token.unset();
   } catch (error) {
-    // TODO: Добавить обработку ошибки error.message
+    return thunkAPI.rejectWithValue();
   }
 });
 

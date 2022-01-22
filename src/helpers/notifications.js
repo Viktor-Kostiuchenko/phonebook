@@ -8,6 +8,12 @@ export function loginError() {
   return Notiflix.Notify.warning('Login failed. Check entered data');
 }
 
+export function registerError() {
+  return Notiflix.Notify.warning(
+    'Registration failed. Check entered data or try to register with new data',
+  );
+}
+
 Notiflix.Notify.init({
   width: '280px',
   position: 'center-top',
