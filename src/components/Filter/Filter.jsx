@@ -2,7 +2,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { DebounceInput } from 'react-debounce-input';
-import { contactsSelectors, contactsActions } from 'redux/contacts';
+import { contactsSelectors } from 'redux/contacts';
+import { changeFilter } from 'redux/contacts/contacts-slice';
 import s from './Filter.module.scss';
 
 export default function Filter() {
@@ -21,9 +22,7 @@ export default function Filter() {
             className={s.input}
             type="text"
             value={value}
-            onChange={e =>
-              dispatch(contactsActions.changeFilter(e.target.value))
-            }
+            onChange={e => dispatch(changeFilter(e.target.value))}
           />
           <span className={s.focusBorder}>
             <i />
@@ -34,7 +33,7 @@ export default function Filter() {
         id="filterBtn"
         className={s.button}
         type="button"
-        onClick={() => dispatch(contactsActions.changeFilter(''))}
+        onClick={() => dispatch(changeFilter(''))}
         disabled={value === ''}
       >
         <span className={s.buttonName}>{t('clear')}</span>

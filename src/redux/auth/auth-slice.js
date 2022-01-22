@@ -13,39 +13,36 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    changeTheme: (state, action) => {
-      state.darkTheme = action.payload;
+    changeTheme: (state, { payload }) => {
+      state.darkTheme = payload;
     },
   },
   extraReducers: {
-    [authOperations.register.fulfilled](state, action) {
-      state.user = action.payload.user;
-      state.token = action.payload.token;
+    [authOperations.register.fulfilled](state, { payload }) {
+      state.user = payload.user;
+      state.token = payload.token;
       state.isLoggedIn = true;
     },
-    [authOperations.logIn.fulfilled](state, action) {
-      state.user = action.payload.user;
-      state.token = action.payload.token;
-      state.darkTheme = action.payload.darkTheme;
+    [authOperations.logIn.fulfilled](state, { payload }) {
+      state.user = payload.user;
+      state.token = payload.token;
+      state.darkTheme = payload.darkTheme;
       state.isLoggedIn = true;
     },
-    [authOperations.logIn.rejected](state, action) {
-      return action;
-    },
-    [authOperations.logOut.fulfilled](state, action) {
+    [authOperations.logOut.fulfilled](state, _action) {
       state.user = { name: null, email: null };
       state.token = null;
       state.isLoggedIn = false;
     },
-    [authOperations.fetchCurrentUser.pending](state) {
+    [authOperations.fetchCurrentUser.pending](state, _action) {
       state.isFetchingCurrentUser = true;
     },
-    [authOperations.fetchCurrentUser.fulfilled](state, action) {
-      state.user = action.payload;
+    [authOperations.fetchCurrentUser.fulfilled](state, { payload }) {
+      state.user = payload;
       state.isLoggedIn = true;
       state.isFetchingCurrentUser = false;
     },
-    [authOperations.fetchCurrentUser.rejected](state) {
+    [authOperations.fetchCurrentUser.rejected](state, _action) {
       state.isFetchingCurrentUser = false;
     },
   },
