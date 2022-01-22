@@ -173,3 +173,17 @@
   font-size: 12px;
   color: red;
 }
+
+.defaultData {
+  font-size: 11px;
+}
+.defaultData:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.defaultData:first-child {
+  margin-top: 10px;
+}
+.defaultData span {
+  font-weight: 700;
+}
