@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeTheme } from 'redux/auth/auth-actions';
+import { changeTheme } from 'redux/auth/auth-slice';
 import { authSelectors } from 'redux/auth';
 import Icons from 'images/icons/sprite.svg';
 import s from './Theme.module.scss';

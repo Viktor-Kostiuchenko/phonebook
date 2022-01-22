@@ -11,10 +11,15 @@ import {
 import { changeFilter } from './contacts-actions';
 
 const items = createReducer([], {
-  [fetchContacts.fulfilled]: (_, { payload }) => payload,
-  [addContact.fulfilled]: (state, { payload }) => [payload, ...state],
-  [deleteContact.fulfilled]: (state, { payload }) =>
-    state.filter(({ id }) => id !== payload),
+  [fetchContacts.fulfilled]: (_state, { payload }) => {
+    return payload;
+  },
+  [addContact.fulfilled]: (state, { payload }) => {
+    return [payload, ...state];
+  },
+  [deleteContact.fulfilled]: (state, { payload }) => {
+    return state.filter(({ id }) => id !== payload);
+  },
   [changeContactName.fulfilled]: (state, { payload }) => {
     return state.map(contact =>
       contact.id === payload.id ? { ...contact, name: payload.value } : contact,
@@ -29,13 +34,15 @@ const items = createReducer([], {
     );
   },
 
-  [orderContacts.fulfilled]: (_, { payload }) => {
+  [orderContacts.fulfilled]: (_state, { payload }) => {
     return [...payload];
   },
 });
 
 const filter = createReducer('', {
-  [changeFilter]: (_, { payload }) => payload,
+  [changeFilter]: (_state, { payload }) => {
+    return payload;
+  },
 });
 
 const loading = createReducer(false, {
@@ -60,12 +67,12 @@ const loading = createReducer(false, {
 });
 
 const error = createReducer(null, {
-  [fetchContacts.rejected]: (_, { payload }) => payload,
-  [addContact.rejected]: (_, { payload }) => payload,
-  [deleteContact.rejected]: (_, { payload }) => payload,
-  [changeContactName.rejected]: (_, { payload }) => payload,
-  [changeContactNumber.rejected]: (_, { payload }) => payload,
-  [orderContacts.rejected]: (_, { payload }) => payload,
+  [fetchContacts.rejected]: (_state, { payload }) => payload,
+  [addContact.rejected]: (_state, { payload }) => payload,
+  [deleteContact.rejected]: (_state, { payload }) => payload,
+  [changeContactName.rejected]: (_state, { payload }) => payload,
+  [changeContactNumber.rejected]: (_state, { payload }) => payload,
+  [orderContacts.rejected]: (_state, { payload }) => payload,
 });
 
 export default combineReducers({

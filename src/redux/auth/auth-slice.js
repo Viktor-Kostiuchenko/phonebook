@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import authOperations from './auth-operations';
-import { changeTheme } from './auth-actions';
 
 const initialState = {
   user: { name: null, email: null },
@@ -13,6 +12,11 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
+  reducers: {
+    changeTheme: (state, action) => {
+      state.darkTheme = action.payload;
+    },
+  },
   extraReducers: {
     [authOperations.register.fulfilled](state, action) {
       state.user = action.payload.user;
@@ -44,10 +48,8 @@ const authSlice = createSlice({
     [authOperations.fetchCurrentUser.rejected](state) {
       state.isFetchingCurrentUser = false;
     },
-    [changeTheme](state, action) {
-      state.darkTheme = action.payload;
-    },
   },
 });
 
+export const { changeTheme } = authSlice.actions;
 export default authSlice.reducer;
