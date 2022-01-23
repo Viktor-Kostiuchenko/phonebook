@@ -21,6 +21,17 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
     setNumberValue(value);
     dispatch(contactsOperations.changeContactNumber({ id, value }));
   };
+
+  const validateName = value => {
+    const pattern =
+      /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/.test(value);
+    return value.length > 2 && value.length < 20 && pattern;
+  };
+
+  const validateNumber = value => {
+    const pattern = Number(value);
+    return value.length > 2 && value.length < 20 && pattern;
+  };
   return (
     <>
       <div className={s.infoWrapper}>
@@ -34,8 +45,8 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
             </svg>
             <EdiText
               value={nameValue}
-              validation={value => value.length > 2 && value.length < 20}
-              validationMessage={'*3-20 symbols'}
+              validation={value => validateName(value)}
+              validationMessage={'*3-20 symbols and not digits'}
               type="text"
               onSave={handleSaveName(id)}
             />
@@ -46,9 +57,9 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
             </svg>
             <EdiText
               value={numberValue}
-              validation={value => value.length > 2 && value.length < 20}
-              validationMessage={'*3-20 symbols'}
-              type="text"
+              validation={value => validateNumber(value)}
+              validationMessage={'*3-20 symbols and only digits'}
+              type="tel"
               onSave={handleSaveNumber(id)}
             />
           </li>
