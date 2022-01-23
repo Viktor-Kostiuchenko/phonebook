@@ -1,45 +1,59 @@
 .inputBox {
   position: relative;
-  padding: 15px 0 0;
-  margin-bottom: 50px;
+
   width: 200px;
+  margin-bottom: 50px;
+  padding: 15px 0 0;
 }
 
 .input {
-  font-family: inherit;
+  padding: 7px 0;
+
+  transition: border-color 0.2s;
+
+  color: #231f20;
   border: 0;
   border-bottom: 2px solid #6b6a6a;
   outline: 0;
-  font-size: 1.1rem;
-  color: #231f20;
-  padding: 7px 0;
   background: transparent;
-  transition: border-color 0.2s;
+
+  font-family: inherit;
+  font-size: 1.1rem;
 }
 
 .label {
   position: absolute;
   top: 0;
+
   display: block;
+
   transition: 0.2s;
-  font-size: 1rem;
+
   color: #6b6a6a;
+
+  font-size: 1rem;
 }
 
 .input:focus {
   padding-bottom: 6px;
-  font-weight: 700;
+
   border-width: 3px;
   border-color: #231f20;
+
+  font-weight: 700;
 }
 
 .input:focus ~ .label {
   position: absolute;
   top: 0;
+
   display: block;
+
   transition: 0.2s;
-  font-size: 1rem;
+
   color: #231f20;
+
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -49,97 +63,131 @@
 }
 
 .button {
+  position: relative;
+
+  display: inline-block;
+
   width: 200px;
   height: 40px;
   padding: 10px 25px;
-  border: 2px solid #231f20;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: transparent;
+  padding: 0;
+
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #eaeaec;
+  border: 2px solid #231f20;
+  border: none;
+  background: transparent;
 
   background: #231f20;
-  color: #eaeaec;
+
+  font-weight: 700;
   line-height: 42px;
-  letter-spacing: 0.05em;
-  padding: 0;
-  border: none;
 }
 
 .buttonName {
   position: relative;
+
   display: block;
+
   width: 100%;
   height: 100%;
 }
-.button:before,
-.button:after {
+
+.button::before,
+.button::after {
   position: absolute;
-  content: '';
-  height: 0%;
+
   width: 2px;
+  height: 0%;
+
+  content: '';
+
   background: #231f20;
 }
-.button:before {
-  right: 0;
+
+.button::before {
   top: 0;
+  right: 0;
+
   transition: all 500ms ease;
 }
-.button:after {
-  left: 0;
+
+.button::after {
   bottom: 0;
+  left: 0;
+
   transition: all 500ms ease;
 }
+
 .button:hover {
   color: #231f20;
   background: transparent;
 }
-.button:hover:before {
-  transition: all 500ms ease;
+
+.button:hover::before {
   height: 100%;
-}
-.button:hover:after {
+
   transition: all 500ms ease;
-  height: 100%;
 }
-.buttonName:before,
-.buttonName:after {
+
+.button:hover::after {
+  height: 100%;
+
+  transition: all 500ms ease;
+}
+
+.buttonName::before,
+.buttonName::after {
   position: absolute;
+
   content: '';
+
   background: #231f20;
 }
-.buttonName:before {
-  left: 0;
+
+.buttonName::before {
   top: 0;
+  left: 0;
+
   width: 0%;
   height: 2px;
+
   transition: all 500ms ease;
 }
-.buttonName:after {
+
+.buttonName::after {
   right: 0;
   bottom: 0;
+
   width: 0%;
   height: 2px;
+
   transition: all 500ms ease;
 }
-.buttonName:hover:before {
+
+.buttonName:hover::before {
   width: 100%;
 }
-.buttonName:hover:after {
+
+.buttonName:hover::after {
   width: 100%;
 }
 
 .button[disabled] {
   pointer-events: none;
+
   opacity: 0.4;
 }
 
 .errorMsg {
   position: absolute;
   top: 100%;
-  font-size: 12px;
+
   color: red;
+
+  font-size: 12px;
 }

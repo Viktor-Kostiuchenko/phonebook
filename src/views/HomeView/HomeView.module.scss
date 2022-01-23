@@ -1,37 +1,26 @@
 :root {
   --shadow-color: #ff9e9e;
-  --shadow-color-light: rgb(229, 226, 226);
+  --shadow-color-light: rgb(229 226 226);
 }
 
 .container {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  height: 100vh;
+
   background-image: url('../../images/home-view.jpg');
   background-position: center center;
   background-size: cover;
 }
 
 .title {
-  font-weight: 700;
-  font-size: 85px;
-  text-align: center;
-  color: #ff524b;
-  text-align: left;
-  line-height: 1.2;
   animation: neon 3s infinite;
-  @media screen and (min-width: 414px) {
-    font-size: 100px;
-  }
-  @media screen and (min-width: 720px) {
-    line-height: 1.1;
-    font-size: 130px;
-  }
-  @media screen and (min-width: 1024px) {
-    line-height: 1.1;
-    font-size: 170px;
-  }
+  text-align: center;
+  text-align: left;
+
+  color: #ff524b;
   text-shadow: -1px -1px 1px var(--shadow-color-light),
     -1px 1px 1px var(--shadow-color-light),
     1px -1px 1px var(--shadow-color-light),
@@ -40,11 +29,30 @@
     0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
     0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
     0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+
+  font-size: 85px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media screen and (min-width: 414px) {
+    font-size: 100px;
+  }
+
+  @media screen and (min-width: 720px) {
+    font-size: 130px;
+    line-height: 1.1;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 170px;
+    line-height: 1.1;
+  }
 }
 
 .quote {
-  padding: 0px 20px;
+  padding: 0 20px;
+
   @media screen and (min-width: 720px) {
-    padding: 0px 60px;
+    padding: 0 60px;
   }
 }

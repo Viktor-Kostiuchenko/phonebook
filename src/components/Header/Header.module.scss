@@ -1,29 +1,31 @@
 .header {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(100, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
-  z-index: 100;
-}
 
-@media screen and (min-width: 1024px) {
-  .header {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+  background-color: rgb(100 0 0 / 10%);
+
+  @media screen and (min-width: 1024px) {
     padding: 20px 60px;
   }
 }
 
 .burger {
   position: absolute;
-  width: 35px;
-  height: 35px;
   top: 38px;
   right: 38px;
+
+  width: 35px;
+  height: 35px;
 }
 
 .burgerBars {
@@ -31,8 +33,8 @@
 }
 
 .crossButton {
-  height: 24px;
   width: 24px;
+  height: 24px;
 }
 
 .cross {
@@ -40,11 +42,15 @@
 }
 
 .menu {
-  background: #ff524b;
-  font-size: 1.15em;
   overflow: hidden !important;
+
   padding: 30px;
   padding-top: 60px;
+
+  background: #ff524b;
+
+  font-size: 1.15em;
+
   @media screen and (min-width: 720px) {
     padding: 30px;
   }
