@@ -1,1 +1,3 @@
-# goit-react-hw-08-phonebook
+![alt text](src/images/phonebook.png 'Phonebook')
+
+# Phonebook
