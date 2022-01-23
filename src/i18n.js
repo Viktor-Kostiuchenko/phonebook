@@ -23,6 +23,9 @@ const resources = {
       delete: 'Delete',
       clear: 'Clear',
       total: 'Contacts:',
+      just: 'Just',
+      be: 'Be',
+      closer: 'Closer',
     },
   },
   uk: {
@@ -45,6 +48,9 @@ const resources = {
       delete: 'Видалити',
       clear: 'Очистити',
       total: 'Контакти:',
+      just: 'Просто',
+      be: 'Будь',
+      closer: 'Ближче',
     },
   },
   ru: {
@@ -67,6 +73,9 @@ const resources = {
       delete: 'Удалить',
       clear: 'Очистить',
       total: 'Контакты:',
+      just: 'Просто',
+      be: 'Будь',
+      closer: 'Ближе',
     },
   },
 };

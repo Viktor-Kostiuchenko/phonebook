@@ -60,7 +60,6 @@ export default function LoginView() {
           <div>
             <input
               className={s.input}
-              // type="password"
               type={passwordShown ? 'text' : 'password'}
               {...register('password')}
               id="loginFormPassword"
@@ -100,7 +99,7 @@ export default function LoginView() {
         >
           <span className={s.buttonName}>{t('in')}</span>
         </button>
-        <div>
+        <div id="defaultDataBox">
           <p className={s.defaultData}>
             *for the default login, use the data below
           </p>

@@ -101,7 +101,7 @@ body.dark {
     fill: #eaeaec;
   }
 
-  // инпут фильтра
+  // filter input
   #filterInput {
     color: #eaeaec;
   }
@@ -113,7 +113,7 @@ body.dark {
     background-color: #eaeaec;
   }
 
-  // кнопка "редактировать"
+  // edit button
   #contactsList button[editext='edit-button'] {
     color: #eaeaec;
   }
@@ -122,7 +122,7 @@ body.dark {
     color: #ff524b;
   }
 
-  // кнопка "delete"
+  // delete button
   #contactsList button span {
     color: #eaeaec;
     background: #49494b;
@@ -134,7 +134,7 @@ body.dark {
     border-color: #eaeaec;
   }
 
-  // иконки "опции"
+  // option icons
   #closeIcon,
   #settingsIcon {
     fill: #eaeaec;
@@ -144,7 +144,7 @@ body.dark {
     filter: brightness(0.5);
   }
 
-  // языки
+  // languages
   #selectedLang {
     border-color: #eaeaec;
     filter: grayscale(0%);
@@ -153,7 +153,7 @@ body.dark {
     border-color: #eaeaec;
   }
 
-  // темы
+  // themes
   #switchTrack {
     border-color: #eaeaec;
   }
@@ -174,14 +174,19 @@ body.dark {
     fill: #eaeaec;
   }
 
-  // мобильное меню
+  // mobile menu
   #mobileMenu .bm-cross {
     background: #eaeaec !important;
   }
 
-  // имя пользователя
+  // user name
   #userName,
   #userName span {
+    color: #eaeaec;
+  }
+
+  // default data
+  #defaultDataBox {
     color: #eaeaec;
   }
 
