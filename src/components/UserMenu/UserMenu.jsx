@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { authSelectors, authOperations } from '../../redux/auth';
 import { useTranslation } from 'react-i18next';
+import { CSSTransition } from 'react-transition-group';
+import { authSelectors, authOperations } from '../../redux/auth';
 import Languages from 'components/Languages';
 import Theme from 'components/Theme';
 import Icons from 'images/icons/sprite.svg';
@@ -41,7 +42,8 @@ export default function UserMenu() {
             <span className={s.buttonName}>{t('out')} </span>
           </button>
         </div>
-        {open && (
+        {/* {open && ( */}
+        <CSSTransition in={open} timeout={200} classNames={s} unmountOnExit>
           <div className={s.options}>
             <button
               type="button"
@@ -62,7 +64,8 @@ export default function UserMenu() {
             <Languages />
             <Theme />
           </div>
-        )}
+          {/* )} */}
+        </CSSTransition>
       </div>
     </>
   );
