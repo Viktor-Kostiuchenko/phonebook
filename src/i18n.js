@@ -26,6 +26,7 @@ const resources = {
       just: 'Just',
       be: 'Be',
       closer: 'Closer',
+      defaultLogin: 'fot the default login, use the data below',
     },
   },
   uk: {
@@ -51,6 +52,7 @@ const resources = {
       just: 'Просто',
       be: 'Будь',
       closer: 'Ближче',
+      defaultLogin: 'для входу за замовчуванням використайте дані нижче',
     },
   },
   ru: {
@@ -76,6 +78,7 @@ const resources = {
       just: 'Просто',
       be: 'Будь',
       closer: 'Ближе',
+      defaultLogin: 'для входа по умолчанию используйте данные ниже',
     },
   },
 };

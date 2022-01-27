@@ -100,14 +100,12 @@ export default function LoginView() {
           <span className={s.buttonName}>{t('in')}</span>
         </button>
         <div id="defaultDataBox">
+          <p className={s.defaultData}>*{t('defaultLogin')}</p>
           <p className={s.defaultData}>
-            *for the default login, use the data below
+            <span>{t('email')}:</span> qaz123@mail.com
           </p>
           <p className={s.defaultData}>
-            <span>email:</span> qaz123@mail.com
-          </p>
-          <p className={s.defaultData}>
-            <span>password:</span> 321zaqzaq
+            <span>{t('password')}:</span> 321zaqzaq
           </p>
         </div>
       </form>
