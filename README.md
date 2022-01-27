@@ -1,3 +1,3 @@
-![alt text](src/images/phonebook.png 'Phonebook')
-
-# Phonebook
+<p align="center">
+  <img src="src/images/phonebook.png">
+</p>
