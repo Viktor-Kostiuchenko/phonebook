@@ -20,7 +20,7 @@
   text-align: center;
   text-align: left;
 
-  color: #ff524b;
+  color: #3f1616;
   text-shadow: -1px -1px 1px var(--shadow-color-light),
     -1px 1px 1px var(--shadow-color-light),
     1px -1px 1px var(--shadow-color-light),
@@ -30,16 +30,16 @@
     0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
     0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
 
-  font-size: 85px;
+  font-size: 70px;
   font-weight: 700;
   line-height: 1.2;
 
   @media screen and (min-width: 414px) {
-    font-size: 100px;
+    font-size: 95px;
   }
 
   @media screen and (min-width: 720px) {
-    font-size: 130px;
+    font-size: 120px;
     line-height: 1.1;
   }
 
