@@ -45,12 +45,12 @@ export default function UserMenu() {
         </div>
         <CSSTransition
           in={open}
-          timeout={200}
+          timeout={300}
           classNames={s}
           unmountOnExit
           nodeRef={userMenuEl}
         >
-          <div className={s.options}>
+          <div className={s.options} ref={userMenuEl}>
             <button
               type="button"
               onClick={() => {
