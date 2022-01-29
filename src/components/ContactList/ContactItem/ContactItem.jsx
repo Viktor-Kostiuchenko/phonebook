@@ -35,9 +35,12 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
   return (
     <>
       <div className={s.infoWrapper}>
-        <svg className={s.icon} width="25" height="25">
-          <use xlinkHref={`${Icons}#drag`} />
-        </svg>
+        <div className={s.dragBox}>
+          <div className={s.dragText}>Drag and drop</div>
+          <svg className={s.icon} width="25" height="25">
+            <use xlinkHref={`${Icons}#drag`} />
+          </svg>
+        </div>
         <ul className={s.info}>
           <li className={s.item}>
             <svg className={s.icon} width="18" height="18">
