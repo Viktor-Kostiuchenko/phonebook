@@ -17,6 +17,7 @@ export default function Languages() {
                 i18n.resolvedLanguage === lang && s.selected
               }`}
               id={i18n.resolvedLanguage === lang ? 'selectedLang' : 'langId'}
+              aria-label={`Set ${lang} language`}
               onClick={() => i18n.changeLanguage(lang)}
             >
               <svg className={s.icon} width="25" height="25">

@@ -26,6 +26,7 @@ export default function UserMenu() {
             type="button"
             className={s.settingsBtn}
             id="settingsBtn"
+            aria-label="Open user settings"
             onClick={() => {
               setOpen(true);
             }}
@@ -38,6 +39,7 @@ export default function UserMenu() {
             className={s.logoutBtn}
             id="logoutBtn"
             type="button"
+            aria-label="Log out"
             onClick={() => dispatch(authOperations.logOut())}
           >
             <span className={s.buttonName}>{t('out')} </span>
@@ -57,6 +59,7 @@ export default function UserMenu() {
                 setOpen(false);
               }}
               className={s.closeBtn}
+              aria-label="Close user menu"
             >
               <svg
                 width="20"

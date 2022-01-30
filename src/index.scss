@@ -37,7 +37,7 @@ body.dark {
   #loginView,
   #homeView,
   #registerView {
-    background-image: url('images/home-view-dark.jpg');
+    background-image: url('images/home-view-dark.webp');
   }
 
   // navigation
@@ -192,7 +192,7 @@ body.dark {
 
   // contacts view
   #contacts {
-    background-image: url('images/phone-mobile-dark.jpg');
+    background-image: url('images/phone-mobile-dark.webp');
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -202,7 +202,7 @@ body.dark {
 
   @media screen and (min-width: 500px) {
     #contacts {
-      background-image: url('images/phone-tablet-dark.jpg');
+      background-image: url('images/phone-tablet-dark.webp');
       background-attachment: fixed;
       background-position: center;
       background-size: cover;
@@ -212,7 +212,7 @@ body.dark {
 
   @media screen and (min-width: 875px) {
     #contacts {
-      background-image: url('images/phone-tablet-dark.jpg');
+      background-image: url('images/phone-tablet-dark.webp');
       background-attachment: fixed;
       background-position: center;
       background-size: cover;
@@ -222,7 +222,7 @@ body.dark {
 
   @media screen and (min-width: 1170px) {
     #contacts {
-      background-image: url('images/phone-desktop-dark.jpg');
+      background-image: url('images/phone-desktop-dark.webp');
       background-attachment: fixed;
       background-position: center center, center center;
       background-size: cover;

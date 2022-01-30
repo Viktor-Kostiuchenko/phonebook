@@ -87,6 +87,7 @@ export default function RegisterView() {
             type="button"
             onClick={togglePassword}
             className={s.showPasswordBtn}
+            aria-label="Show password"
           >
             {!passwordShown && (
               <svg width="20" height="20" className={s.icon} id="regIconShown">
@@ -109,6 +110,7 @@ export default function RegisterView() {
           id="regFormBtn"
           className={s.button}
           type="submit"
+          aria-label="Registrate user"
           disabled={emptyStr || undefinedSrt}
         >
           <span className={s.buttonName}>{t('reg')}</span>

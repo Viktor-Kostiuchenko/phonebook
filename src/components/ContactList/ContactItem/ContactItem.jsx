@@ -51,6 +51,7 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
               validation={value => validateName(value)}
               validationMessage={'*3-20 symbols and not digits'}
               type="text"
+              aria-label="Edit contact name"
               onSave={handleSaveName(id)}
             />
           </li>
@@ -63,6 +64,7 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
               validation={value => validateNumber(value)}
               validationMessage={'*3-20 symbols and only digits'}
               type="tel"
+              aria-label="Edit contact number"
               onSave={handleSaveNumber(id)}
             />
           </li>
@@ -72,6 +74,7 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
         type="button"
         onClick={() => onDeleteContact(id)}
         className={s.button}
+        aria-label="delete contact"
       >
         <span className={s.topKey} />
         <p className={s.buttonText}>{t('delete')}</p>

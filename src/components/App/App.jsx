@@ -1,16 +1,27 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Switch } from 'react-router-dom';
-import Header from 'components/Header';
+import loadable from '@loadable/component';
 import Loader from 'components/Loader';
 import PrivateRoute from 'components/Routes/PrivateRoute';
 import PublicRoute from 'components/Routes/PublicRoute';
 import { authOperations, authSelectors } from 'redux/auth';
 
-const HomeView = lazy(() => import('views/HomeView'));
-const RegisterView = lazy(() => import('views/RegisterView'));
-const LoginView = lazy(() => import('views/LoginView'));
-const ContactsView = lazy(() => import('views/ContactsView'));
+const Header = loadable(() =>
+  import('components/Header' /* webpackChunkName: "header"*/),
+);
+const HomeView = lazy(() =>
+  import('views/HomeView' /* webpackChunkName: "home-view"*/),
+);
+const RegisterView = lazy(() =>
+  import('views/RegisterView' /* webpackChunkName: "register-view"*/),
+);
+const LoginView = lazy(() =>
+  import('views/LoginView' /* webpackChunkName: "login-view"*/),
+);
+const ContactsView = lazy(() =>
+  import('views/ContactsView' /* webpackChunkName: "contacts-view"*/),
+);
 
 export default function App() {
   const theme = useSelector(authSelectors.getTheme);

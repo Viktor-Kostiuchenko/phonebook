@@ -69,6 +69,7 @@ export default function ContactForm() {
         className={s.button}
         type="submit"
         disabled={emptyStr || undefinedSrt}
+        aria-label="Add contact to collection"
       >
         <span className={s.buttonName}>{t('add')}</span>
       </button>

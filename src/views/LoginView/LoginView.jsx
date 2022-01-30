@@ -73,6 +73,7 @@ export default function LoginView() {
             type="button"
             onClick={togglePassword}
             className={s.showPasswordBtn}
+            aria-label="Show password"
           >
             {!passwordShown && (
               <svg width="20" height="20" className={s.icon} id="logIconShown">
@@ -95,6 +96,7 @@ export default function LoginView() {
           id="loginFormBtn"
           className={s.button}
           type="submit"
+          aria-label="Log in"
           disabled={emptyStr || undefinedSrt}
         >
           <span className={s.buttonName}>{t('in')}</span>

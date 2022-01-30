@@ -35,6 +35,7 @@ export default function Filter() {
         type="button"
         onClick={() => dispatch(changeFilter(''))}
         disabled={value === ''}
+        aria-label="Clear filter data"
       >
         <span className={s.buttonName}>{t('clear')}</span>
       </button>
