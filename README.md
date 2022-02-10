@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="src/images/phonebook.png">
+  <img src="src/images/phonebook.webp">
 </p>
