@@ -1,14 +1,14 @@
 import { Oval } from 'react-loader-spinner';
 import s from './Loader.module.scss';
 
-export default function Loader() {
+export default function Loader({ mainLoader }) {
   return (
     <Oval
-      wrapperClass={s.loader}
+      wrapperClass={mainLoader ? s.mainLoader : s.loader}
       arialLabel="loading-indicator"
       color="#ff524b"
-      height={30}
-      width={30}
+      height={mainLoader ? 100 : 30}
+      width={mainLoader ? 100 : 30}
       timeout={3000}
       radius={10000}
     />

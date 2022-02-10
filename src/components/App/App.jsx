@@ -42,7 +42,9 @@ export default function App() {
 
   return (
     <>
-      {!isFetchingCurrentUser && (
+      {isFetchingCurrentUser ? (
+        <Loader mainLoader={'mainLoader'} />
+      ) : (
         <>
           <Header />
           <Switch>
